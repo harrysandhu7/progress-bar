@@ -1,5 +1,7 @@
-# demo-progress-bar
-This project shows progress bars created using angularjs library. 
+# Progress-bar
+This project shows progress bars created using angularjs library. To view working demo please [click here](https://harrysandhu7.github.io/progress-bar/).
+
+**Note**: This demo is running on secure URL and fetching data from non secure URL [http://pb-api.herokuapp.com/bars](http://pb-api.herokuapp.com/bars), So, please enable *Load Unsafe Scripts* in your browser to see real data.
 
 ### Developing and building
 1. Cloning the repository

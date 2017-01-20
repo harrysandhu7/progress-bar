@@ -60,7 +60,7 @@ describe('Progress Bar', function () {
 
     it('should update progress bar data and should not go less than zero', function() {
       scope.updateProgressBar(-37);
-      expect(JSON.stringify(scope.progressBarData)).toBe('{"buttons":[46,27,-11,-37],"bars":[46,85,81],"limit":200}');
+      expect(JSON.stringify(scope.progressBarData)).toBe('{"buttons":[46,27,-11,-37],"bars":[9,85,81],"limit":200}');
       scope.updateProgressBar(-37);
       scope.updateProgressBar(-37);
       expect(JSON.stringify(scope.progressBarData)).toBe('{"buttons":[46,27,-11,-37],"bars":[0,85,81],"limit":200}');
@@ -68,12 +68,12 @@ describe('Progress Bar', function () {
 
     it('should update progress bar data and can go over bar-limit', function() {
       scope.updateProgressBar(46);
-      expect(JSON.stringify(scope.progressBarData)).toBe('{"buttons":[46,27,-11,-37],"bars":[129,85,81],"limit":200}');
+      expect(JSON.stringify(scope.progressBarData)).toBe('{"buttons":[46,27,-11,-37],"bars":[175,85,81],"limit":200}');
       scope.updateProgressBar(46);
       scope.updateProgressBar(46);
       scope.updateProgressBar(46);
       scope.updateProgressBar(46);
-      expect(JSON.stringify(scope.progressBarData)).toBe('{"buttons":[46,27,-11,-37],"bars":[313,85,81],"limit":200}');
+      expect(JSON.stringify(scope.progressBarData)).toBe('{"buttons":[46,27,-11,-37],"bars":[543,85,81],"limit":200}');
     });
 
   });

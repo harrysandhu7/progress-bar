@@ -16,8 +16,10 @@
 				});
 
 			// Update progress bar data
-			$scope.updateProgressBar= function(delta){
-				$scope.progressBarData.bars[$scope.selectedBar] += delta;
+			$scope.updateProgressBar= function(deltaPercentage){
+				var deltaValue = ($scope.progressBarData.limit/100) * deltaPercentage;
+
+				$scope.progressBarData.bars[$scope.selectedBar] += deltaValue;
 				if($scope.progressBarData.bars[$scope.selectedBar] < 0){
 					$scope.progressBarData.bars[$scope.selectedBar] =0;
 				}
